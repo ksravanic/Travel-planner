@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Journey - Travel Planner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .booking-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p.subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3b71ca;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        .btn-submit {
+            background-color: #3b71ca;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #2c5496;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #3b71ca;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="booking-container">
+        <h2>Set Your Destination</h2>
+        <p class="subtitle">Fill in the details to find the best deals for your trip.</p>
+        
+        <form action="#">
+            <div class="form-group">
+                <label for="destination">Where to?</label>
+                <input type="text" id="destination" placeholder="e.g. Maldives, London, Tokyo" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure" required>
+                </div>
+                <div class="form-group">
+                    <label for="return">Return</label>
+                    <input type="date" id="return" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Travelers</label>
+                <select id="guests">
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="3">3 Adults</option>
+                    <option value="4">Family (4+)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Search Best Prices</button>
+        </form>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+</body>
+</html>
